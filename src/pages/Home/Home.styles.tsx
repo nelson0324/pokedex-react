@@ -10,7 +10,11 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   background-color: white;
-  width: 500px;
+  width: 100%;
+   @media (min-width: 600px){
+
+    width:500px;
+  }
 `;
 
 export const SearchSection = styled.section`

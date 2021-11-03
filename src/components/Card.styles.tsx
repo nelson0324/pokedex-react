@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CardProps } from "./Card";
 
@@ -26,7 +27,7 @@ export const CardContent = styled.div`
   position: relative;
 `;
 
-export const CardContainer = styled.div<CardProps>`
+export const CardContainer = styled(Link)<CardProps>`
   background-color: ${(props) => props.bgColor};
   align-items: center;
   display: flex;
@@ -39,6 +40,7 @@ export const CardContainer = styled.div<CardProps>`
   position: relative;
   overflow: hidden;
   color: #ffff;
+  text-decoration:none;
   justify-content: center;
   ${LeftCornerCircle} {
     background-color: ${(props) => props.shadow};
