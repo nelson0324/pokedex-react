@@ -41,5 +41,19 @@ export const Title = styled.h1`
 export const PokemonsList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
+`;
+export const Image = styled.img`
+  width: 110px;
+`;
+export const PokemonDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  text-transform: capitalize;
+`;
+
+export const PokemonName = styled.div`
+  text-align: center;
 `;

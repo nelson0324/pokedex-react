@@ -39,8 +39,8 @@ export const CardContainer = styled(Link)<CardProps>`
     rgb(0 0 0 / 35%) 0px 1px 1px 0px, rgb(0 0 0 / 46%) 0px 1px 3px 0px;
   position: relative;
   overflow: hidden;
-  color: #ffff;
-  text-decoration:none;
+  color: ${(props) => (props.color ? props.color : "#ffffff")};
+  text-decoration: none;
   justify-content: center;
   ${LeftCornerCircle} {
     background-color: ${(props) => props.shadow};
