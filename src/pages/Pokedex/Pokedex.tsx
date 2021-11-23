@@ -7,13 +7,15 @@ import {
   PokemonDiv,
   Image,
   PokemonName,
+  SkeletonsContainer,
 } from "./Pokedex.styles";
 import { IoIosArrowRoundBack, IoIosMenu } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Card } from "../../components/Card";
 import { usePokemons } from "../../hooks/usePokemons";
+import Skeletons from "react-loading-skeleton";
 export const Pokedex = () => {
-  const { pokemons = [] } = usePokemons();
+  const { pokemons, loading } = usePokemons();
 
   return (
     <Container>
@@ -27,6 +29,9 @@ export const Pokedex = () => {
         <Title>Pokedex</Title>
 
         <PokemonsList>
+          <SkeletonsContainer>
+            {true && <Skeletons count={10} style={{ height: 100 }} />}
+          </SkeletonsContainer>
           {pokemons.map((pokemon) => {
             return (
               <Card

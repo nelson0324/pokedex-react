@@ -4,6 +4,7 @@ export const Container = styled.div`
   background-color: #f6f7fc;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   justify-content: center;
   min-height: 100vh;
 `;
@@ -56,4 +57,13 @@ export const PokemonDiv = styled.div`
 
 export const PokemonName = styled.div`
   text-align: center;
+`;
+
+export const SkeletonsContainer = styled.div`
+  grid-column: span 2;
+  > span {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 `;

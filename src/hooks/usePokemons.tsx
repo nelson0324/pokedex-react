@@ -8,7 +8,10 @@ interface Pokemon extends Result {
 }
 export const usePokemons = () => {
   const [pokemons, setPokemons] = React.useState<Pokemon[]>([]);
+  const [loading, setLoading] = React.useState<Boolean>(true);
+
   React.useEffect(() => {
+    setLoading(true);
     pokeApi
       .get<GetPokemons>("/pokemon?limit=10&offset=0")
       .then(async (response) => {
@@ -36,9 +39,11 @@ export const usePokemons = () => {
           })),
         ]);
       });
+    setLoading(false);
   }, []);
 
   return {
     pokemons,
+    loading,
   };
 };
